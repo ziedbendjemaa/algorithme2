@@ -1,0 +1,38 @@
+ALGORITHM different number
+VAR
+tab1 : ARRAY_OF  INTEGER ;
+tab2 : ARRAY_OF INTEGER;
+tab3 : ARRAY_OF INTEGER;
+i: INTEGER;
+j: INTEGER;
+sum: INTEGER;
+Exist: BOOLEAN;
+BEGIN
+    READ(tab1)
+    READ(tab2)
+sum:=0;
+    FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+        Exist:=false;
+        FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+            IF (tab1[i]=tab2[j])) THEN
+                Exist:=true;
+                BREAK;
+            END_IF
+            sum:=sum+tab1[i];
+            tab3.push(tab1[i])
+        END_FOR
+    END_FOR
+    FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+        Exist:=false;
+        FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+            IF (tab1[i]=tab2[j])) THEN
+                Exist:=true;
+                BREAK;
+            END_IF
+            sum:=sum+tab2[j];
+            tab3.push(tab2[j])
+        END_FOR
+    END_FOR
+    Write(sum)
+    
+END
